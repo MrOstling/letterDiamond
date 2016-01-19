@@ -4,9 +4,10 @@ using namespace std;
  * the capital letter provided by the input c at the left and right.
  */
 void printDiamond(char c){
+   string s=" ";                    //initialize the line
    //Make the top of the diamond line by line.
    for(int i='A'; i<=c; i++){
-      string s=" ";                 //initialize the line
+      s=" ";                        //reset line
       s.insert(0,(c+i-2*'A'),' ');  //fill the line with empty space
       s[c-i]=(char)i;               //put in the left letter
       s[c+i-2*'A']=(char)i;         //put in the right letter
@@ -14,7 +15,7 @@ void printDiamond(char c){
    }
    //Make the bottom of the diamond line by line.
    for(int i=c-1; i>='A'; i--){
-      string s=" ";                 //initialize the line
+      s=" ";                        //reset line
       s.insert(0,(c+i-2*'A'),' ');  //fill the line with empty space
       s[c-i]=(char)i;               //put in the left letter
       s[c+i-2*'A']=(char)i;         //put in the right letter
